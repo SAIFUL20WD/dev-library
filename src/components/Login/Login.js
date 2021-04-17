@@ -7,11 +7,13 @@ import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 import googleIcon from '../../images/icons/google.png'
 
-if(firebase.apps.length === 0){
-    firebase.initializeApp(firebaseConfig);
-}
    
 const Login = () => {
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    const provider = new firebase.auth.GoogleAuthProvider();
+    
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     const history = useHistory()
@@ -19,7 +21,6 @@ const Login = () => {
     const { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleSignIn = () => {
-        const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
         .then((result) => { 
             const {displayName, email, photoURL} = result.user;
