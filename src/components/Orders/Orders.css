@@ -1,0 +1,20 @@
+.orders-container {
+    text-align: center;
+}
+#orders-table {
+    background-color: #F4F7FC;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+#orders-table thead tr th {
+    background-color: #F5F6FA;
+    color: #141313;
+    border: none;
+    border-radius: 10px;
+}
+
+#orders-table tr th, td {
+    text-align: start;
+    padding: 10px 20px;
+}

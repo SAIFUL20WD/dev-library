@@ -1,0 +1,71 @@
+.checkout-container {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+.checkout-container h1 {
+    color: #2f3568;
+}
+.checkout-details {
+    box-shadow: 10px 10px 40px lightgrey;
+    padding: 20px 50px 40px;
+    border-radius: 10px;
+}
+th {
+    border-bottom: 1px solid lightgray;
+}
+th, td {
+    padding: 5px 0px 10px 0px;
+}
+th {
+    text-align: start;
+    color: #999999;
+}
+td {
+    font-weight: 500;
+    text-align: center;
+}
+tbody tr td:first-child, tfoot tr td:first-child {
+    text-align: start;
+}
+tfoot tr td:last-child {
+    text-align: end;
+}
+.description-table-data {
+    padding-right: 400px;
+}
+.price-table-data {
+    padding-left: 200px;
+}
+tfoot tr td {
+    border-top: 1px solid lightgrey;
+}
+.checkout-btn {
+    background-color: #fb2056;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cart-icon img {
+    width: 22px;
+}
+.shipment-details {
+    box-shadow: 10px 10px 40px lightgrey;
+    display: flex;
+    margin: 50px 0px 10px 0px;
+    padding: 30px;
+    border-radius: 10px;
+} 
+.shipment-details div {
+    margin: 5px 20px;
+}
+.shipment-details input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 350px;
+    padding: 10px;
+}

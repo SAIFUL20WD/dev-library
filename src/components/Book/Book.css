@@ -1,0 +1,48 @@
+.book-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px #ebe8e8;
+    margin: 10px;
+    padding: 10px;
+}
+.book-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebe8e8;
+    border-radius: 10px;
+    margin: 5px;
+}
+.book-image-container img {
+    padding: 30px;
+    width: 250px;
+    height: 300px;
+}
+.book-info-container {
+    line-height: 10px;
+    padding-left: 10px;
+}
+.book-price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.price {
+    color: #fb2056;
+    font-weight: 800;
+}
+.buy-btn {
+    background-color: #fb2056;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 28px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.author-name {
+    color: #5a5858;
+}

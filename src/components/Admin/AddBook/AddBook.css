@@ -1,0 +1,40 @@
+.add-book-container {
+    background-color: #F4F7FC;
+    padding-left: 50px;
+    /* padding: 0px 50px.; */
+}
+.add-book-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-right: 80px;
+}
+.input-group-container {
+    display: flex;
+} 
+.input-group-container div {
+    margin: 5px 20px;
+}
+form input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 350px;
+    padding: 10px;
+}
+form label {
+    font-weight: 600;
+}
+input[type='file'] {
+    border: none;
+}
+.save {
+    background-color: #fb2056;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 20px 0px 0px 780px;
+    border-radius: 3px;
+    cursor: pointer;
+}

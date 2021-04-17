@@ -1,0 +1,49 @@
+header {
+    max-width: 1200px;
+    margin: auto;
+}
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav div .link {
+    color: #414680;
+    text-decoration: none;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+nav ul li {
+    margin: 10px 30px;
+}
+nav ul li .link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+.login {
+    background-color: #fb2056;
+    color: #fff !important;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin-right: -30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.avater {
+    background-color: lightgrey;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.avater img {
+    vertical-align: middle;
+    height: 32px;
+    border-radius: 20px;
+    margin-right: 5px;
+}

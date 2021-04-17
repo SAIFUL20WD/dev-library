@@ -1,0 +1,25 @@
+.manage-books-container {
+    background-color: #F4F7FC;
+    padding-left: 50px;
+}
+#manage-books-table {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+#manage-books-table thead tr th {
+    background-color: #F5F6FA;
+    color: #141313;
+    border: none;
+    border-radius: 10px;
+}
+#manage-books-table tr th, td {
+    text-align: start;
+    padding: 10px 20px;
+}
+td img {
+    cursor: pointer;
+    width: 25px;
+    margin: 0px 5px;
+}
