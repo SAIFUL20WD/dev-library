@@ -7,7 +7,6 @@
     color: #fff;
     width: 100%;
     min-height: 100vh;
-    /* margin: 0 auto; */
 }
 .admin-sidebar-container .link {
     color: #fff;
@@ -21,7 +20,6 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     margin: 10px 0px;
     padding: 0px 55px;
@@ -35,4 +33,23 @@
 }
 .active {
     background-color: #2f216a;
+}
+@media(max-width: 640px){
+    .admin-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .admin-sidebar-container {
+        min-height: auto;
+    }
+    .admin-sidebar-container .link h1 {
+        padding: 10px;
+    }
+    .admin-sidebar-container div {
+        padding: 0px 10px;
+    }
+    .admin-sidebar-container div img {
+        width: 25px;
+        margin-right: 5px;
+    }
 }

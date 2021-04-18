@@ -13,28 +13,24 @@ const Admin = () => {
         <div className="admin-container">
             <div className="admin-sidebar-container">
                 <Link to="/" className="link"><h1>DEV LIBRARY</h1></Link>
-                {showAddBook ? <div onClick={()=>setShowAddBook(false)}>
+                <div onClick={()=>setShowAddBook(false)} className={showAddBook ? '' : 'active'}>
                     <img src={grid} alt=""/>
                     <h4>Manage Books</h4>
-                </div> : <div onClick={()=>setShowAddBook(false)} className="active">
-                    <img src={grid} alt=""/>
-                    <h4>Manage Books</h4>
-                </div>}
-                {showAddBook ? <div onClick={()=>setShowAddBook(true)} className="active">
+                </div>
+                <div onClick={()=>setShowAddBook(true)} className={showAddBook ? 'active' : ''}>
                     <img src={plus} alt=""/>
                     <h4>Add Book</h4>
-                </div> : <div onClick={()=>setShowAddBook(true)}>
-                    <img src={plus} alt=""/>
-                    <h4>Add Book</h4>
-                </div>}
+                </div>
                 <div onClick={() => alert('Edit option is not available now')}>
                     <img src={edit} alt=""/>
                     <h4>Edit Books</h4>
                 </div>
             </div>
-            { 
-                showAddBook ? <AddBook></AddBook> : <ManageBooks></ManageBooks>
-            }
+            <div>
+                { 
+                    showAddBook ? <AddBook></AddBook> : <ManageBooks></ManageBooks>
+                }
+            </div>
         </div>
     );
 };

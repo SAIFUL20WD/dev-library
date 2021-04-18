@@ -44,9 +44,9 @@ tfoot tr td {
     color: #fff;
     border: none;
     outline: none;
-    margin: 10px;
+    margin: 20px 10px 0px;
     padding: 15px 20px;
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
 }
 .cart-icon img {
@@ -66,6 +66,35 @@ tfoot tr td {
     border: 1px solid lightgrey;
     border-radius: 5px;
     margin-bottom: 15px;
-    width: 350px;
+    width: 320px;
     padding: 10px;
+}
+@media(max-width: 640px){
+    .checkout-container h1 {
+        margin-left: 20px;
+    }
+    .checkout-details {
+        margin: 0px 20px;
+    }
+    .description-table-data {
+        padding-right: 50px;
+    }
+    .price-table-data {
+        padding-left: 50px;
+    }
+    .checkout-btn {
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+    .shipment-details {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 20px;
+    } 
+    .shipment-details div {
+        margin: 0px 20px 0px 0px;
+    }
+    .shipment-details input {
+        width: 100%;
+    }
 }

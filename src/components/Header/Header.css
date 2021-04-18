@@ -47,3 +47,26 @@ nav ul li .link {
     border-radius: 20px;
     margin-right: 5px;
 }
+@media(max-width: 640px){
+    nav div {
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul {
+        justify-content:center;
+    }
+    nav ul li {
+        margin: 0px 5px;
+    }
+    .login {
+        margin: 0px;
+    }
+    .avater {
+        color: #fff;
+        background-color: royalblue;
+        padding: 0px 10px;
+    }
+    .avater img {
+        display: none;
+    }
+}

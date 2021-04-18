@@ -35,7 +35,7 @@ const Login = () => {
     
     return (
         <div className="login-container"> 
-            <h2>Login With</h2>
+            <h2>Login</h2>
             <div className="google-auth" onClick={handleGoogleSignIn}>
                 <img src={googleIcon} alt="Google Icon"/>
                 <h4>Continue With Google</h4>

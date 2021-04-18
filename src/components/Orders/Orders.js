@@ -20,7 +20,7 @@ const Orders = () => {
                 <thead>
                     <tr>
                         <th>Order Item</th>
-                        <th>Date</th>
+                        <th>Order Date</th>
                         <th>Price</th>
                     </tr>
                 </thead>  

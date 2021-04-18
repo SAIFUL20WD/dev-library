@@ -116,7 +116,9 @@ const Checkout = () => {
                             <label htmlFor="mobile">Mobile Number</label><br/>
                             <input type="text" onBlur={handleShipment} name="mobile" placeholder="Enter Mobile Number" required/><br/>
                         </div>
-                        <button className="checkout-btn">Place Order</button>
+                        <div>
+                            <button className="checkout-btn">Place Order</button>
+                        </div>
                     </div>
                 </form>
             </div>
