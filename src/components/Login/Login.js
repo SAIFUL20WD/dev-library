@@ -6,6 +6,7 @@ import firebaseConfig from './firebaseConfig';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 import googleIcon from '../../images/icons/google.png'
+import Header from '../Header/Header';
 
    
 const Login = () => {
@@ -34,11 +35,14 @@ const Login = () => {
     }
     
     return (
-        <div className="login-container"> 
-            <h2>Login</h2>
-            <div className="google-auth" onClick={handleGoogleSignIn}>
-                <img src={googleIcon} alt="Google Icon"/>
-                <h4>Continue With Google</h4>
+        <div>
+            <Header></Header>
+            <div className="login-container"> 
+                <h2>Login</h2>
+                <div className="google-auth" onClick={handleGoogleSignIn}>
+                    <img src={googleIcon} alt="Google Icon"/>
+                    <h4>Continue With Google</h4>
+                </div>
             </div>
         </div>
     );

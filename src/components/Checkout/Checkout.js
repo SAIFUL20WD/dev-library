@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Checkout.css';
 import cartIcon from '../../images/icons/shopping-cart-black.png';
+import Loader from "react-loader-spinner";
 
 const Checkout = () => {
+    const [loading, setLoading] = useState(true)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [shipmentDetail, setShipmentDetail] = useState({
         address: '',
@@ -18,7 +20,10 @@ const Checkout = () => {
     useEffect( () => {
         fetch(`https://frozen-river-26206.herokuapp.com/book/${_id}`)
         .then(res => res.json())
-        .then(data => setCheckoutBook(data))
+        .then(data => {
+            setCheckoutBook(data)
+            setLoading(false)
+        })
     }, [_id])
     const currentURL = `/checkout/${_id}`
 
@@ -77,33 +82,36 @@ const Checkout = () => {
                     </div>
                 </nav>
             </header>
-
+                                 
             <div className="checkout-container">
                 <h1>Checkout</h1>
                 <div className="checkout-details">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th className="description-table-data">Description</th>
-                                <th>Quantity</th>
-                                <th className="price-table-data">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="description-table-data">{checkoutBook.name}</td>
-                                <td>1</td>
-                                <td className="price-table-data">${checkoutBook.price}</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>Total with VAT</td>
-                                <td></td>
-                                <td>${Number(checkoutBook.price) + 35}</td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    {
+                        loading ? <Loader className="spinner" visible={loading} type="ThreeDots" color="#fb2056" height={50} width={50}/>
+                        : <table>
+                            <thead>
+                                <tr>
+                                    <th className="description-table-data">Description</th>
+                                    <th>Quantity</th>
+                                    <th className="price-table-data">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="description-table-data">{checkoutBook.name}</td>
+                                    <td>1</td>
+                                    <td className="price-table-data">${checkoutBook.price}</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Total with VAT</td>
+                                    <td></td>
+                                    <td>${Number(checkoutBook.price) + 35}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    }
                 </div>
                 
                 <form onSubmit={handlePlaceOrder}>
